@@ -10,8 +10,6 @@ while(cans > 0) {
 		lyrics = lyrics + "No more cans of " + drink + " on the wall <br>";
 	}
 	cans = cans -1;
-	//alert("cans = "+cans);
-	//document.write("asdasd" + "<br>");
 }
-
+abc
 document.write(lyrics);
