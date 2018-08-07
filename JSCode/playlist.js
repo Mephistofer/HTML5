@@ -1,17 +1,26 @@
-var drink = "shekaka";
-var lyrics = "";
-var cans = 3;
-while(cans > 0) {
-	lyrics = lyrics + cans + " can of " + drink + " on the wall <br>";
-	if (cans > 1) {
-		lyrics = lyrics + (cans-1) + " cans of " + drink + " on the wall <br>";
+
+function handleButtonClick() {
+	var textInput = document.getElementById("songTextInput");
+	var songName = textInput.value;
+
+	if (songName == "") {
+		alert("Please enter a song");
 	}
 	else {
-		lyrics = lyrics + "No more cans of " + drink + " on the wall <br>";
+		var li = document.createElement("li");
+		li.innerHTML = songName;
+		var ul = document.getElementById("playlist");
+		ul.appendChild(li);
+
+		save(songName);
 	}
-	cans = cans -1;
-	//alert("cans = "+cans);
-	//document.write("asdasd" + "<br>");
 }
 
-document.write(lyrics);
+function init() {
+	var button = document.getElementById("addButton");
+	button.onclick = handleButtonClick;
+	loadPlaylist();
+}
+
+window.onload = init;
+
