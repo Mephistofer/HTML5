@@ -3,6 +3,13 @@
 	<head>
 		<meta charset="utf-8">
 		<title> Test1 </title>
+		<script>
+			function addSongs() {
+				var song1 = document.getElementById("movie2");
+				song1.innerHTML = "frinddd";
+			}
+			window.onload = addSongs;
+		</script>
 	</head>
 
 	<body>
@@ -13,11 +20,23 @@
 				Special showing tonight at <em>midnight </em>!
 			</span>
 		</p>
-		<h2 id ="movie1">Forbiden Planet</h2>
+		<h2 id ="movie2">Forbiden Planet</h2>
 		<p>Playing at 5:00pm, 9:00pm.</p>
 		<script>
 		var text1 = document.getElementById("movie1");
+<<<<<<< HEAD
 		text1.innerHTML = "hello";
+=======
+		text1.innerHTML = "hahah";
+
+		var tempByHour = new Array();
+		tempByHour[0] = 59.2;
+		tempByHour[3] = 80;
+		document.writeln(tempByHour[3]);
+
+		var n = 3 - "one";
+		document.writeln(n);
+>>>>>>> 34b94db14c13570a3fda9cdedaecfc06aeccff04
 		</script>
 	</body>
 </html>
