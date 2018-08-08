@@ -1,17 +1,8 @@
 
-function getStoreArray(key) {
-	var playListArray = localStorage.getItem(key);
-	if (playListArray  == null || playListArray == "") {
-		playListArray = new Array();
-	}
-	else {
-		playListArray = JSON.parse(playListArray);
-	}
-	return playListArray;
-}
-
-function getSavedSongs() {
-	return getStoreArray("playlist");
+function save(item) {
+	var playListArray = getStoreArray("playlist");
+	playListArray.push(item);
+	localStorage.setItem("playlist", JSON.stringify(playListArray));
 }
 
 function loadPlaylist() {
@@ -25,9 +16,17 @@ function loadPlaylist() {
 	}
 }
 
-function save(item) {
-	var playListArray = getStoreArray("playlist");
-	playListArray.push(item);
-	localStorage.setItem("playlist", JSON.stringify(playListArray));
+function getSavedSongs() {
+	return getStoreArray("playlist");
 }
 
+function getStoreArray(key) {
+	var playListArray = localStorage.getItem(key);
+	if (playListArray  == null || playListArray == "") {
+		playListArray = new Array();
+	}
+	else {
+		playListArray = JSON.parse(playListArray);
+	}
+	return playListArray;
+}
