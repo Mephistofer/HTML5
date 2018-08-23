@@ -15,3 +15,6 @@ while(cans > 0) {
 }
 
 document.write(lyrics);
+
+var boneus = 43*15*0.1;
+document.writeln(boneus);
