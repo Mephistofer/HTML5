@@ -4,7 +4,7 @@
 <head>
 	<meta charset="utf-8">
 	<title> Test1 </title>
-
+	<script src="JSCode/mycode1.js"></script>
 	<script>
 		function addSongs() {
 			var song1 = document.getElementById("movie2");
@@ -25,7 +25,7 @@
 	</p>
 	<h2 id="movie2">Forbiden Planet</h2>
 	<p>Playing at 5:00pm, 9:00pm.</p>
-	<script src="JSCode/mycode1.js"></script>
+	
 	<script>
 		var text1 = document.getElementById("movie1");
 
@@ -38,6 +38,18 @@
 
 		var n = 3 - "one";
 		document.writeln(n);
+
+		var lennon = new Object();
+		lennon.name = "Jonh";
+		lennon.year = 1984;
+		lennon.living = false;
+		document.writeln(lennon.name);
+
+		var kk={};	//类似kk = new Object(); 
+					//不能直接使用var kk;
+		kk.vocalist  = lennon;
+		document.writeln(kk.vocalist.year);
+		document.writeln("<br> end </br>");
 	</script>
 </body>
 
