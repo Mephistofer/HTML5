@@ -11,7 +11,7 @@ function loadPlaylist() {
 	if (playListArray != null) {
 		for (var i = 0; i < playListArray.length; i++) {
 			var li = document.createElement("li");
-			li.innerHTML = playListArray[i]
+			li.innerHTML = playListArray[i];
 			ul.appendChild(li);
 		}
 	}
