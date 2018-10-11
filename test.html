@@ -27,6 +27,22 @@
 	<p>Playing at 5:00pm, 9:00pm.</p>
 	
 	<script>
+		var total = 10;
+		function square(num)
+		{
+			total = num*num;
+			return total;
+		}
+
+		function pp()
+		{
+			var total = 50;
+			var number = square(20);
+			alert(total);
+		}
+
+		pp();
+		alert(total);
 		var text1 = document.getElementById("movie1");
 
 		text1.innerHTML = "hahah";
@@ -50,6 +66,26 @@
 		kk.vocalist  = lennon;
 		document.writeln(kk.vocalist.year);
 		document.writeln("<br> end </br>");
+
+		var a = false;
+		var b = "" ;
+		if (a == b)
+		{
+			alert("1");
+		}
+		if (a != b)
+		{
+			alert("2");
+		}
+
+		if (a===b)
+		{
+			alert("3");
+		}
+		if (a !== b)
+		{
+			alert("4");
+		}
 	</script>
 </body>
 
